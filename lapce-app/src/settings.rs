@@ -543,7 +543,9 @@ pub fn settings_view(
     ))
     .style(|s| s.absolute().size_pct(100.0, 100.0))
     .debug_name("Settings")
-    .on_cleanup(move || { editors.remove(search_editor_id); })
+    .on_cleanup(move || {
+        editors.remove(search_editor_id);
+    })
 }
 
 fn settings_item_view(
@@ -1183,7 +1185,9 @@ pub fn theme_color_settings_view(
     )
     .style(|s| s.absolute().size_full())
     .debug_name("Theme Color Settings")
-    .on_cleanup(move || { editors.remove(search_editor_id); })
+    .on_cleanup(move || {
+        editors.remove(search_editor_id);
+    })
 }
 
 fn dropdown_view(
